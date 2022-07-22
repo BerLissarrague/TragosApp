@@ -1,0 +1,9 @@
+/* Estilos de nav*/
+.navbar-brand{
+    color: antiquewhite;
+  }
+  
+.nav-item.nav-link{ 
+    color: red;
+  }
+  
