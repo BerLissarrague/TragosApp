@@ -14,17 +14,17 @@ const NavbarComponent = () => {
           <BiDrink size="30px" className="ms-1"/>
           Tragos
         </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink className="nav-item nav-link" to="tragos-del-dia">
+            <NavLink className="nav-item nav-link" to="/">
               Trago del dia
             </NavLink>
-            {/* Mejorar esta ruta: search.php?s=margarita */}
+            {/* Mejorar esta ruta */}
             <NavLink className="nav-item nav-link" to="/"> 
               Buscar tragos
             </NavLink>
-            {/* Mejorar esta ruta: filter.php?i=Gin */}
+            {/* Mejorar esta ruta */}
             <NavLink className="nav-item nav-link" to="/"> 
               Ingredientes
             </NavLink>

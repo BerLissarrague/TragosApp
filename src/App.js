@@ -7,6 +7,13 @@ function App() {
   return (
     <BrowserRouter>
       <NavbarComponent />
+
+      {/* aqui rutas */}
+      {/* ruta para home: "/" */}
+      {/* ruta para buscar tragos: "/buscar-trago" */}
+      {/* ruta para ingredientes: "/buscar-por-ingrediente" */}
+
+      {/* buscar trago va a ir adentro de home */}
       <CardTrago />  
     </BrowserRouter>
   );

@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { getRandomDrink } from "../Servicios/main_service";
+import tragosService from "../Servicios/main_service";
 
 function CardTrago() {
-	const [trago, setTrago] = useState(null);
+	const [trago, setTrago] = useState(null); //tenes que iniciarlo con algo
 
+	// generamos una funcion con async y await para que la const drink tenga el dato correcto antes de hacer setTrago
   const fetchData = async () => {
-    const drink = await getRandomDrink();
+    const drink = await tragosService.getRandomDrink();
     setTrago(drink[0]);
   };
 
 	useEffect(() => {
+		// llamamos a la funcion que trae la data. No podiamos hacer directamente el async con el useEffect
 		fetchData();
 	}, []);
 
