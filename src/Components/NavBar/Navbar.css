@@ -1,9 +1,19 @@
 /* Estilos de nav*/
-.navbar-brand{
-    color: antiquewhite;
-  }
-  
-.nav-item.nav-link{ 
-    color: red;
-  }
+.navbar-brand {
+  color: antiquewhite;
+}
+
+.nav-item.nav-link {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.navbar-brand.active, .nav-item.nav-link.active {
+  color: orange;
+}
+
+.navbar-brand:hover, .nav-item.nav-link:hover {
+  color: rgb(196, 139, 65);
+}
+
   

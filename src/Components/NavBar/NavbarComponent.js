@@ -10,14 +10,23 @@ const NavbarComponent = () => {
   return (
     <Navbar className="navbarr m-10" bg="dark" expand="sm">
       <Container>
-        <NavLink className="navbar-brand" to="/"><span><BiDrink className="ml-2"/></span>
+        <NavLink className="navbar-brand" to="/">
+          <BiDrink size="30px" className="ms-1"/>
           Tragos
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="ms-auto">
             <NavLink className="nav-item nav-link" to="tragos-del-dia">
               Trago del dia
+            </NavLink>
+            {/* Mejorar esta ruta: search.php?s=margarita */}
+            <NavLink className="nav-item nav-link" to="/"> 
+              Buscar tragos
+            </NavLink>
+            {/* Mejorar esta ruta: filter.php?i=Gin */}
+            <NavLink className="nav-item nav-link" to="/"> 
+              Ingredientes
             </NavLink>
           </Nav>
         </Navbar.Collapse>
