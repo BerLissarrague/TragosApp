@@ -6,17 +6,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import "./Navbar.css";
 import { BiDrink } from "react-icons/bi"
 
-function Navbarr() {
+const NavbarComponent = () => {
   return (
     <Navbar className="navbarr m-10" bg="dark" expand="sm">
       <Container>
         <NavLink className="navbar-brand" to="/"><span><BiDrink className="ml-2"/></span>
-        Tragos
+          Tragos
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <NavLink className="nav-item nav-link" to="Tragos del Dia">
+            <NavLink className="nav-item nav-link" to="tragos-del-dia">
               Trago del dia
             </NavLink>
           </Nav>
@@ -26,4 +26,4 @@ function Navbarr() {
   );
 }
 
-export default Navbarr;
+export default NavbarComponent;

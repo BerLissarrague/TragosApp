@@ -1,14 +1,14 @@
-import  Navbarr  from "./Components/NavBar/Navbar";
+import NavbarComponent from "./Components/NavBar/NavbarComponent";
 import CardTrago from "./Components/CardTrago";
 import { BrowserRouter } from "react-router-dom";
 import './App.css';
 
 function App() {
   return (
-  <BrowserRouter>
-  <Navbarr />
-  <CardTrago />  
-  </BrowserRouter>
+    <BrowserRouter>
+      <NavbarComponent />
+      <CardTrago />  
+    </BrowserRouter>
   );
 }
 
