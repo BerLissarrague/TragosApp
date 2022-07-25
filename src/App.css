@@ -25,3 +25,10 @@
   width: 30%;
   margin: 5% auto;
 }
+
+.inputsarch{
+  width: 35%;
+}
+.bntsarch{
+  justify-content: center;
+}

@@ -1,20 +1,20 @@
 import NavbarComponent from "./Components/NavBar/NavbarComponent";
-import CardTrago from "./Components/CardTrago";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import BuscarTragosPage from "./Pages/BuscarTragosPage"
+import HomePage from "./Pages/HomePage";
+import BuscarPorIngrediente from "./Pages/BuscarPorIngrediente"
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
       <NavbarComponent />
-
-      {/* aqui rutas */}
-      {/* ruta para home: "/" */}
-      {/* ruta para buscar tragos: "/buscar-trago" */}
-      {/* ruta para ingredientes: "/buscar-por-ingrediente" */}
-
-      {/* buscar trago va a ir adentro de home */}
-      <CardTrago />  
+      <Routes>
+        <Route path="buscar-x-ingrediente" element={<BuscarPorIngrediente />} />
+        <Route path="buscar-tragos" element={<BuscarTragosPage />} />
+        <Route path="Trago-del-dia" element={<HomePage />} />
+        <Route path="*" element={<HomePage />} />
+      </Routes>
     </BrowserRouter>
   );
 }

@@ -11,21 +11,21 @@ const NavbarComponent = () => {
     <Navbar className="navbarr m-10" bg="dark" expand="sm">
       <Container>
         <NavLink className="navbar-brand" to="/">
-          <BiDrink size="30px" className="ms-1"/>
+          <BiDrink size="30px" className="ms-1" />
           Tragos
         </NavLink>
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink className="nav-item nav-link" to="/">
+            <NavLink className="nav-item nav-link" to="Trago-del-dia">
               Trago del dia
             </NavLink>
             {/* Mejorar esta ruta */}
-            <NavLink className="nav-item nav-link" to="/"> 
+            <NavLink className="nav-item nav-link" to="buscar-tragos">
               Buscar tragos
             </NavLink>
             {/* Mejorar esta ruta */}
-            <NavLink className="nav-item nav-link" to="/"> 
+            <NavLink className="nav-item nav-link" to="buscar-x-ingrediente">
               Ingredientes
             </NavLink>
           </Nav>
