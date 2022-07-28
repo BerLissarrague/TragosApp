@@ -1,70 +1,85 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
 import { tragosService } from "../Servicios/main_service";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import CardComponent from "../Components/CardComponent";
 import Card from "react-bootstrap/Card";
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 
-function BuscarTragosPage() {
-    const [serchDrink, setSerchDrink] = useState(null);
-    const [newDrinks, setNewDrinks] = useState(null)
+const BuscarTragosPage = () => {
 
-    const handelInput = ({ target }) => {
-        setSerchDrink(target.value)
-    }
+	const [searchDrink, setSearchDrink] = useState("");
+	const [newDrinks, setNewDrinks] = useState([]);
 
-    const handelDrink = (e) => {
-        e.preventDefault();
-        fetchData()
-    }
-    const fetchData = async () => {
-        const drink = await tragosService.getSerchDrink(serchDrink);
-        console.log(drink)
-        setNewDrinks(drink)
-    };
+	const handelInput = (e) => {
+		e.preventDefault()
+		setSearchDrink(e.target.value);
+	};
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+	const handelDrink = async (e) => {
+		e.preventDefault();
+		const drink = await tragosService.getSearchDrink(searchDrink);
+		setNewDrinks(drink);
+	};
 
-    return (
-        <div className='container' >
-            {(!newDrinks) ?
-                <Form className="container" onSubmit={handelDrink}>
-                    <Form.Group className="container mb-3" controlId="formBasicEmail">
-                        <Form.Label ><h2>Ingresa tu bebida favorita</h2></Form.Label>
-                        <Form.Control className="inputsarch" type="text" placeholder="Enter email" onChange={handelInput} />
-                    </Form.Group>
-                    <Button className='bntsarch m-lg-3' variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
+	return (
+		<>
+			<Form className="container form-container mt-4">
+				<Form.Group
+					className="container mb-3"
+					controlId="formBasicEmail"
+				>
+					<Form.Label>
+						<h2>Ingresa tu bebida favorita</h2>
+					</Form.Label>
+					<Form.Control
+						className="input-search"
+						type="text"
+						value={searchDrink}
+						placeholder="Su bebida favorita"
+						onChange={(e) => handelInput(e)}
+					/>
+				</Form.Group>
+				<Button
+					className="mb-5 mt-3 btn-form"
+					variant="primary"
+					type="submit"
+					onClick={(e) => handelDrink(e)}
+				>
+					Buscar
+				</Button>
+			</Form>
+			{!newDrinks &&
+				<div className="d-flex flex-row flex-wrap justify-content-around">
+					<Card>
+						<Card.Title classes='main-card'
+							idDrink="noDrink" >No hay trago</Card.Title>
+					</Card>
 
-                : (newDrinks.map(trago => {
-                    const { idDrink, strInstructions, strDrinkThumb, strDrink } = trago;
-                    return (
-                        <div key={idDrink}>
-                            <Card className="main-card">
-                                <Card.Img variant="top" src={""} />
-                                <Card.Body>
-                                    <Card.Title>{strDrink}</Card.Title>
-                                    <Card.Text>{strInstructions}</Card.Text>
-                                    <img
-                                        className="card-image"
-                                        src={strDrinkThumb}
-                                        alt="drink-img"
-                                    />
-                                </Card.Body>
-                            </Card>
-                        </div>
-                    )
-                }))
-
-
-            }
-        </div >
-
-    )
+				</div>}
+			{newDrinks &&
+				<div className="d-flex flex-row flex-wrap justify-content-around">
+					{newDrinks.map((trago) => {
+						const {
+							idDrink,
+							strInstructions,
+							strDrinkThumb,
+							strDrink
+						} = trago;
+						return (
+							<CardComponent
+								key={idDrink}
+								idDrink={idDrink}
+								strInstructions={strInstructions}
+								strDrinkThumb={strDrinkThumb}
+								strDrink={strDrink}
+								classes='multiple-card'
+							/>
+						);
+					})}
+				</div>
+			}
+		</>
+	);
 }
-
 
 export default BuscarTragosPage;

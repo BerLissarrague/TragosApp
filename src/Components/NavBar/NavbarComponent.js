@@ -7,8 +7,9 @@ import "./Navbar.css";
 import { BiDrink } from "react-icons/bi"
 
 const NavbarComponent = () => {
+
   return (
-    <Navbar className="navbarr m-10" bg="dark" expand="sm">
+    <Navbar className="navbar m-10" bg="dark" expand="sm">
       <Container>
         <NavLink className="navbar-brand" to="/">
           <BiDrink size="30px" className="ms-1" />
@@ -17,15 +18,10 @@ const NavbarComponent = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink className="nav-item nav-link" to="Trago-del-dia">
-              Trago del dia
-            </NavLink>
-            {/* Mejorar esta ruta */}
             <NavLink className="nav-item nav-link" to="buscar-tragos">
               Buscar tragos
             </NavLink>
-            {/* Mejorar esta ruta */}
-            <NavLink className="nav-item nav-link" to="buscar-x-ingrediente">
+            <NavLink className="nav-item nav-link" to="buscar-por-ingrediente">
               Ingredientes
             </NavLink>
           </Nav>

@@ -1,34 +1,58 @@
-.main-container {
-  width: 100%;
-  display: flex;
-  margin-bottom: 5%;
+h3 {
+  text-align: center;
 }
 
 .main-card {
-  justify-content: center;
-  width: 50%;
-  margin: 5% auto;
+  width: 30%;
+  margin: 4% auto 2%;
   text-align: center;
   background-color: rgb(243, 243, 243);
   border-radius: 15px;
 }
 
-.card-image {
-  width: 40%;
+.multiple-card {
+  width: 30%;
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+  border-radius: 15px;
+  margin-bottom: 2%;
+}
+
+.card-img,
+.card-img-bottom,
+.card-img-top {
   height: auto;
   border: 1px solid grey;
   border-radius: 10px;
-  margin: auto;
+  width: 70%;
+  margin: 5% auto 0;
 }
 
 .card-button {
   width: 30%;
   margin: 5% auto;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 10px;
 }
 
-.inputsarch{
-  width: 35%;
+.card-body {
+  width: 70%;
+  margin: auto;
+  text-align: center;
 }
-.bntsarch{
-  justify-content: center;
+
+.input-search {
+  width: 55%;
+  margin: auto;
+}
+
+.form-container {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
+
+.btn-form {
+  width: 53%;
 }

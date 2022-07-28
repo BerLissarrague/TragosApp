@@ -4,24 +4,28 @@ const base_url = "https://www.thecocktaildb.com/api/json/v1/1/"; // faltaba el '
 
 const getRandomDrink = async () => {
   let result = await axios.get(`${base_url}random.php`);
-  return result.data.drinks; // de esta forma devuelve arrays de tragos
+  return result.data.drinks;
 };
 
-
-const getSerchDrink = async (nobreTrago) => {
+const getSearchDrink = async (nobreTrago) => {
   let result = await axios.get(`${base_url}search.php?s=${nobreTrago}`);
-  return result.data.drinks; // de esta forma devuelve arrays de tragos
+  return result.data.drinks;
 };
 
-// servicio para buscar tragos por ingredientes: filter.php?i=Gin => igual aca con gin
-const getSerchIngredient = async (nobreIngrediente) => {
+const getSearchIngredient = async (nobreIngrediente) => {
 
-  let result = await axios.get(`${base_url}filter.php?i=${nobreIngrediente}`);
+  let result = await axios.get(`${base_url}filter.php?i=${nobreIngrediente}`)
+  return result.data.drinks;
+}
+const getIdDrinks = async (id) => {
+  let result = await axios.get(`${base_url}lookup.php?i=${id}`);
+  console.log(result.data.drinks)
   return result.data.drinks;
 }
 
 export const tragosService = {
   getRandomDrink,
-  getSerchDrink,
-  getSerchIngredient
+  getSearchDrink,
+  getSearchIngredient,
+  getIdDrinks
 };
