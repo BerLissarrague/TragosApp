@@ -71,7 +71,7 @@ function BuscarPorIngrediente() {
 				</div>
 			)}
 			{newIngredients && (
-				<div className="d-flex flex-row flex-wrap justify-content-around">
+				<div className="d-flex flex-row flex-wrap justify-content-around align-items-start">
 					{newIngredients.map((trago) => {
 						const {
 							idDrink,
@@ -80,7 +80,7 @@ function BuscarPorIngrediente() {
 							strDrink
 						} = trago;
 						return (
-							< CardComponent
+							<CardComponent
 								key={idDrink}
 								idDrink={idDrink}
 								strInstructions={strInstructions}

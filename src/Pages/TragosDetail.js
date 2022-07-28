@@ -1,14 +1,12 @@
-import Card from "react-bootstrap/Card";
 import { useParams } from 'react-router-dom';
 import { tragosService } from "../Servicios/main_service"
 import { useEffect, useState } from "react";
-import SpinnerOne from "../Components/SpinnerOne"
-
+import SpinnerOne from "../Components/SpinnerOne";
+import CardComponent from '../Components/CardComponent';
 
 const TragoDetail = () => {
     const [trago, setTrago] = useState({});
     let { id } = useParams();
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,20 +17,19 @@ const TragoDetail = () => {
     }, [id])
 
     return (
-        <div className="container">
+        <div className='drink-container'>
             {(!trago) && <SpinnerOne />}
             {(trago) &&
-                < Card id={trago.idDrink} className="main-card">
-                    <Card.Title>{trago.strDrink}</Card.Title>
-                    <Card.Img variant="top" src={trago.strDrinkThumb} />
-                    < Card.Body >
-                        <Card.Text>{trago.strInstructions}</Card.Text>
-                    </Card.Body>
-                </Card>}
-        </div >
-
+                <CardComponent
+                    key={trago.idDrink}
+                    idDrink={trago.idDrink}
+                    strInstructions={trago.strInstructions}
+                    strDrinkThumb={trago.strDrinkThumb}
+                    strDrink={trago.strDrink}
+                    classes='multiple-card'
+                />}
+        </div>
     )
-
-
 }
+
 export default TragoDetail;

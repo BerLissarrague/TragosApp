@@ -19,7 +19,6 @@ const getSearchIngredient = async (nobreIngrediente) => {
 }
 const getIdDrinks = async (id) => {
   let result = await axios.get(`${base_url}lookup.php?i=${id}`);
-  console.log(result.data.drinks)
   return result.data.drinks;
 }
 

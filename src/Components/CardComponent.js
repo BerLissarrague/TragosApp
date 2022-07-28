@@ -5,7 +5,7 @@ const CardComponent = ({ idDrink, strDrinkThumb, strDrink, strInstructions, clas
     let componentClasses = classes ? classes : '';
 
     return (
-        <Link to={`/trago-detail/${idDrink}`} className={componentClasses}>
+        <Link to={`/trago-detail/${idDrink}`} className={`link ${componentClasses}`}>
             <Card id={idDrink}>
                 <Card.Img variant="top" src={strDrinkThumb} />
                 <Card.Body>

@@ -16,13 +16,15 @@ function HomePage() {
     }, []);
 
     return (
-        <div className="container">
-            <h3 className="mt-5 mb-8 t">Trago del dia</h3>
-            {(!trago) ? <SpinnerOne /> :
-                (trago && (
-                    <CardComponent {...trago} classes="main-card" />
-                ))}
-        </div>
+        <>
+            <h3 className="mt-5">Trago del dia</h3>
+            <div className="drink-container">
+                {(!trago) ? <SpinnerOne /> :
+                    (trago && (
+                        <CardComponent {...trago} classes="main-card" />
+                    ))}
+            </div>
+        </>
     )
 }
 

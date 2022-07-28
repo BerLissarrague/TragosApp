@@ -56,9 +56,9 @@ const BuscarTragosPage = () => {
 					</Card>
 
 				</div>}
-			{newDrinks &&
-				<div className="d-flex flex-row flex-wrap justify-content-around">
-					{newDrinks.map((trago) => {
+			<div className="d-flex flex-row flex-wrap justify-content-around align-items-start">
+				{newDrinks &&
+					newDrinks.map((trago) => {
 						const {
 							idDrink,
 							strInstructions,
@@ -76,8 +76,7 @@ const BuscarTragosPage = () => {
 							/>
 						);
 					})}
-				</div>
-			}
+			</div>
 		</>
 	);
 }
