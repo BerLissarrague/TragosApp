@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CardComponent from "../Components/CardComponent";
 import { tragosService } from "../Servicios/main_service";
-import SpinnerOne from "../Components/SpinnerOne"
+import SpinnerOne from "../Components/SpinnerOne";
 
 function HomePage() {
     const [trago, setTrago] = useState(null);
@@ -16,13 +16,15 @@ function HomePage() {
     }, []);
 
     return (
-        <div className="container">
-            <h3 className="mt-5 mb-8 t">Trago del dia</h3>
-            {(!trago) ? <SpinnerOne /> :
-                (trago && (
-                    <CardComponent {...trago} classes="main-card" />
-                ))}
-        </div>
+        <>
+            <h3 className="mt-5">Trago del dia</h3>
+            <div className="drink-container">
+                {(!trago) ? <SpinnerOne /> :
+                    (trago && (
+                        <CardComponent {...trago} classes="main-card" />
+                    ))}
+            </div>
+        </>
     )
 }
 

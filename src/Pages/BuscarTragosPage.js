@@ -56,9 +56,9 @@ const BuscarTragosPage = () => {
 					</Card>
 
 				</div>}
-			{newDrinks &&
-				<div className="d-flex flex-row flex-wrap justify-content-around">
-					{newDrinks.map((trago) => {
+			<div className="d-flex flex-row flex-wrap justify-content-around">
+				{newDrinks &&
+					newDrinks.map((trago) => {
 						const {
 							idDrink,
 							strInstructions,
@@ -75,11 +75,12 @@ const BuscarTragosPage = () => {
 								classes='multiple-card'
 							/>
 						);
-					})}
-				</div>
-			}
+					})
+				}
+			</div>
 		</>
-	);
+	)
 }
+
 
 export default BuscarTragosPage;

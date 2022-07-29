@@ -1,5 +1,6 @@
 h3 {
   text-align: center;
+  margin: auto;
 }
 
 .main-card {
@@ -55,4 +56,14 @@ h3 {
 
 .btn-form {
   width: 53%;
+}
+
+.link {
+  text-decoration: none !important;
+  color: black !important;
+}
+
+.drink-container {
+  width: 50%;
+  margin: 2% auto;
 }

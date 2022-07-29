@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const base_url = "https://www.thecocktaildb.com/api/json/v1/1/"; // faltaba el 'https://'
+const base_url = "https://www.thecocktaildb.com/api/json/v1/1/";
 
 const getRandomDrink = async () => {
   let result = await axios.get(`${base_url}random.php`);
@@ -13,13 +13,12 @@ const getSearchDrink = async (nobreTrago) => {
 };
 
 const getSearchIngredient = async (nobreIngrediente) => {
-
   let result = await axios.get(`${base_url}filter.php?i=${nobreIngrediente}`)
   return result.data.drinks;
 }
+
 const getIdDrinks = async (id) => {
   let result = await axios.get(`${base_url}lookup.php?i=${id}`);
-  console.log(result.data.drinks)
   return result.data.drinks;
 }
 
