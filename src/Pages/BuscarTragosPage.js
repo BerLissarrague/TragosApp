@@ -56,7 +56,7 @@ const BuscarTragosPage = () => {
 					</Card>
 
 				</div>}
-			<div className="d-flex flex-row flex-wrap justify-content-around">
+			<div className="align-items-start d-flex flex-row flex-wrap justify-content-around">
 				{newDrinks &&
 					newDrinks.map((trago) => {
 						const {
@@ -72,7 +72,7 @@ const BuscarTragosPage = () => {
 								strInstructions={strInstructions}
 								strDrinkThumb={strDrinkThumb}
 								strDrink={strDrink}
-								classes='multiple-card'
+								classes='multiple-card '
 							/>
 						);
 					})
