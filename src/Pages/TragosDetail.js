@@ -3,29 +3,33 @@ import { tragosService } from "../Servicios/main_service";
 import { useEffect, useState } from "react";
 import SpinnerOne from "../Components/SpinnerOne";
 import CardComponent from "../Components/CardComponent";
+
 const TragoDetail = () => {
     const [trago, setTrago] = useState({});
+    const [ingredients, setIngredients] = useState([]);
     let { id } = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
             const drink = await tragosService.getIdDrinks(id);
             setTrago(drink[0]);
+            // array to partially load ingredients. Then we useState for ingredients
+            let ings = [];
+            // api has a total of 15 ingredients, but some of them are null
+            for (var i=1; i < 15; i++){
+                // represents key objects
+                let ing = 'strIngredient'+i;
+                let mea = 'strMeasure'+i;
+                // if ingredients exist
+                if (drink[0][ing]){
+                    ings.push([drink[0][ing], drink[0][mea]]);
+                }
+            }
+            // once we have partial array, we set our useState variable 'ingredients'
+            setIngredients(ings);
         };
-
         fetchData();
     }, [id]);
-
-    let arryAxuIngredientes = [
-        [`${trago.strIngredient1}`,`${trago.strMeasure1}`],
-        [`${trago.strIngredient2}`,` ${trago.strMeasure2}`],
-        [`${trago.strIngredient3}`,`${trago.strMeasure3}`],
-        [`${trago.strIngredient4}`,` ${trago.strMeasure4}`],
-        [`${trago.strIngredient5}`,` ${trago.strMeasure5}`],
-        [`${trago.strIngredient6}`,` ${trago.strMeasure6}`],
-        [`${trago.strIngredient7}`,` ${trago.strMeasure7}`]
-    ]
-   let index=0;
 
     return (
         <div className="container">
@@ -43,11 +47,10 @@ const TragoDetail = () => {
                                 strDrink={trago.strDrink}
                                 classes="multiple-card"
                             />
-                            <div className="card bg-light mb-3">
-                                <h3 className="card-header">{trago.strDrink}</h3>
+                            <div className="card bg-light mt-3">
                                 <div className="card-body">
                                     <h6>Proporciones</h6>
-                                    <table className=" container table card-text">
+                                    <table className="container table card-text">
                                         <thead>
                                             <tr>
                                                 <td>
@@ -59,12 +62,15 @@ const TragoDetail = () => {
                                             </tr>
                                         </thead>
                                         <tbody>                                         
-                                                {arryAxuIngredientes.map((ingredientes) => (                                                  
-                                                    <tr key={index++}>
-                                                        <td >{ingredientes[0]}</td>
-                                                        <td>{ingredientes[1]}</td>                                       
-                                                </tr>
-                                                ))}
+                                            {ingredients.map((ing) => {
+                                                return (                                        
+                                                    <tr key={ing[0]}>
+                                                        <td >{ing[0]}</td>
+                                                        <td>{ing[1]}</td>                                       
+                                                    </tr>
+                                                    )
+                                                })
+                                            }
                                         </tbody>
                                     </table>
                                 </div>
