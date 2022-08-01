@@ -17,7 +17,7 @@ const TragoDetail = () => {
             let ings = [];
             // api has a total of 15 ingredients, but some of them are null
             for (var i=1; i < 15; i++){
-                // represents key objects
+    
                 let ing = 'strIngredient'+i;
                 let mea = 'strMeasure'+i;
                 // if ingredients exist
@@ -25,7 +25,7 @@ const TragoDetail = () => {
                     ings.push([drink[0][ing], drink[0][mea]]);
                 }
             }
-            // once we have partial array, we set our useState variable 'ingredients'
+          
             setIngredients(ings);
         };
         fetchData();

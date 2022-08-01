@@ -64,7 +64,7 @@ function BuscarPorIngrediente() {
 			</Form>
 			{!newIngredients && (
 				<div className="d-flex flex-row flex-wrap justify-content-around" >
-					<Card>
+					<Card className="p-4">
 						<Card.Title classes='main-card'
 							idDrink="noDrink" >No hay trago</Card.Title>
 					</Card>
