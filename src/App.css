@@ -1,38 +1,69 @@
-.App {
+h3 {
+  text-align: center;
+  margin: auto;
+}
+
+.main-card {
+  width: 30%;
+  margin: 4% auto 2%;
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+  border-radius: 15px;
+}
+
+.multiple-card {
+  width: 30%;
+  text-align: center;
+  background-color: rgb(243, 243, 243);
+  border-radius: 15px;
+  margin-bottom: 2%;
+}
+
+.card-img,
+.card-img-bottom,
+.card-img-top {
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 70%;
+  margin: 5% auto 0;
+}
+
+.card-button {
+  width: 30%;
+  margin: 5% auto;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 10px;
+}
+
+.card-body {
+  width: 70%;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-search {
+  width: 55%;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-container {
+  text-align: center;
+  width: 70%;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-form {
+  width: 53%;
 }
 
-.App-link {
-  color: #61dafb;
+.link {
+  text-decoration: none !important;
+  color: black !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.drink-container {
+  width: 50%;
+  margin: 2% auto;
 }

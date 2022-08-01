@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import NavbarComponent from "./Components/NavBar/NavbarComponent";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import BuscarTragosPage from "./Pages/BuscarTragosPage";
+import HomePage from "./Pages/HomePage";
+import BuscarPorIngrediente from "./Pages/BuscarPorIngrediente";
 import './App.css';
+import TragoDetail from "./Pages/TragosDetail";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavbarComponent />
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="buscar-por-ingrediente" element={<BuscarPorIngrediente />} />
+        <Route path="buscar-tragos" element={<BuscarTragosPage />} />
+        <Route path="trago-detail/:id" element={<TragoDetail />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
