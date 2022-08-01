@@ -16,7 +16,7 @@ function App() {
         <Route path="TragosApp/Buscar-por-ingrediente" element={<BuscarPorIngrediente />} />
         <Route path="TragosApp/Buscar-tragos" element={<BuscarTragosPage />} />
         <Route path="TragosApp/Trago-detail/:id" element={<TragoDetail />} />
-        <Route path="*" element={<Navigate to="TragosApp" replace />} />
+        <Route path="*" element={<Navigate to="/TragosApp" replace />} />
       </Routes>
     </BrowserRouter>
   );
