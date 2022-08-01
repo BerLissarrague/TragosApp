@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/TragosApp/static/css/main.073c9b0a.css",
-    "main.js": "/TragosApp/static/js/main.206fcf53.js",
+    "main.css": "/TragosApp/static/css/main.93e89c84.css",
+    "main.js": "/TragosApp/static/js/main.5b2a19d3.js",
     "static/js/787.7832c121.chunk.js": "/TragosApp/static/js/787.7832c121.chunk.js",
-    "static/media/logo.svg": "/TragosApp/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/TragosApp/index.html",
-    "main.073c9b0a.css.map": "/TragosApp/static/css/main.073c9b0a.css.map",
-    "main.206fcf53.js.map": "/TragosApp/static/js/main.206fcf53.js.map",
+    "main.93e89c84.css.map": "/TragosApp/static/css/main.93e89c84.css.map",
+    "main.5b2a19d3.js.map": "/TragosApp/static/js/main.5b2a19d3.js.map",
     "787.7832c121.chunk.js.map": "/TragosApp/static/js/787.7832c121.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.206fcf53.js"
+    "static/css/main.93e89c84.css",
+    "static/js/main.5b2a19d3.js"
   ]
 }
