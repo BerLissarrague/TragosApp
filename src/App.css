@@ -38,7 +38,7 @@ h3 {
 }
 
 .card-body {
-  width: 70%;
+  /*width: 70%;*/
   margin: auto;
   text-align: center;
 }
@@ -67,3 +67,62 @@ h3 {
   width: 50%;
   margin: 2% auto;
 }
+.cards{
+  display: flex;
+}
+
+@media screen and (max-width: 640px){
+  .multiple-card{
+    width: 100%;
+  }
+  .card{
+    margin-bottom: 2%;
+  }
+  h6{
+    font-size:16px;
+  }
+  h5{
+    font-size:small;
+  }
+  .card-medidas{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+  } 
+  .cards{
+    display: block;
+    width: 70%;
+    margin:auto;
+    margin-bottom:5%;   
+  }
+  .card-body-detail{
+    margin:0;
+  }
+}
+  
+
+@media screen and (min-width: 641px) and (max-width: 860px){
+  .card-medidas{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  h5{
+    font-size:medium;
+  }
+  .cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    margin:2% auto ;
+    margin-bottom:5%;
+    justify-items: center ;
+    }
+  .multiple-card {
+    width: 80%;
+  }
+  
+}
+

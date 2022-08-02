@@ -3,6 +3,7 @@ import { tragosService } from "../Servicios/main_service";
 import { useEffect, useState } from "react";
 import SpinnerOne from "../Components/SpinnerOne";
 import CardComponent from "../Components/CardComponent";
+import Table from 'react-bootstrap/Table';
 
 const TragoDetail = () => {
     const [trago, setTrago] = useState({});
@@ -47,11 +48,11 @@ const TragoDetail = () => {
                                 strDrink={trago.strDrink}
                                 classes="multiple-card"
                             />
-                            <div className="card bg-light mt-3">
-                                <div className="card-body">
+                            <div className="card bg-light mt-3 card-medidas ">
+                                <div className="card-body card-body-detail ">
                                     <h6>Proporciones</h6>
-                                    <table className="container table card-text">
-                                        <thead>
+                                    <Table  className="container table card-tex formato">
+                                        <thead >
                                             <tr>
                                                 <td>
                                                     <h5>Ingredientes</h5>
@@ -72,7 +73,7 @@ const TragoDetail = () => {
                                                 })
                                             }
                                         </tbody>
-                                    </table>
+                                    </Table>
                                 </div>
                             </div>
                         </>

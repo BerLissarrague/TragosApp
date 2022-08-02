@@ -71,7 +71,7 @@ function BuscarPorIngrediente() {
 				</div>
 			)}
 			{newIngredients && (
-				<div className="d-flex flex-row flex-wrap justify-content-around align-items-start">
+				<div className="flex-row flex-wrap justify-content-around align-items-start cards">
 					{newIngredients.map((trago) => {
 						const {
 							idDrink,

@@ -56,7 +56,7 @@ const BuscarTragosPage = () => {
 					</Card>
 
 				</div>}
-			<div className="align-items-start d-flex flex-row flex-wrap justify-content-around">
+			<div className="align-items-start  flex-row flex-wrap justify-content-around cards">
 				{newDrinks &&
 					newDrinks.map((trago) => {
 						const {
