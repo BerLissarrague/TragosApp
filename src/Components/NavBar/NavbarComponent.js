@@ -11,17 +11,17 @@ const NavbarComponent = () => {
   return (
     <Navbar className="navbar m-10" bg="dark" expand="sm">
       <Container>
-        <NavLink className="navbar-brand" to="TragosApp">
+        <NavLink className="navbar-brand" to="tragos-app">
           <BiDrink size="30px" className="ms-1" />
           Tragos
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <NavLink className="nav-item nav-link" to="TragosApp/Buscar-tragos">
+            <NavLink className="nav-item nav-link" to="tragos-app/buscar-tragos">
               Buscar tragos
             </NavLink>
-            <NavLink className="nav-item nav-link" to="TragosApp/Buscar-por-ingrediente">
+            <NavLink className="nav-item nav-link" to="tragos-app/buscar-por-ingrediente">
               Ingredientes
             </NavLink>
           </Nav>

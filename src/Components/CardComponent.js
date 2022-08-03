@@ -5,7 +5,7 @@ const CardComponent = ({ idDrink, strDrinkThumb, strDrink, strInstructions, clas
     let componentClasses = classes ? classes : '';
 
     return (
-        <Link to={`/TragosApp/Trago-detail/${idDrink}`} className={`link ${componentClasses}`} >
+        <Link to={`/tragos-app/trago-detail/${idDrink}`} className={`link ${componentClasses}`} >
             <Card id={idDrink}>
                 <Card.Img variant="top" src={strDrinkThumb} />
                 <Card.Body>

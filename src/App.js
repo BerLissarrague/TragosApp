@@ -12,11 +12,11 @@ function App() {
     <BrowserRouter>
       <NavbarComponent />
       <Routes>
-        <Route exact path="TragosApp" element={<HomePage />} />
-        <Route path="TragosApp/Buscar-por-ingrediente" element={<BuscarPorIngrediente />} />
-        <Route path="TragosApp/Buscar-tragos" element={<BuscarTragosPage />} />
-        <Route path="TragosApp/Trago-detail/:id" element={<TragoDetail />} />
-        <Route path="*" element={<Navigate to="TragosApp" replace />} />
+        <Route exact path="tragos-app" element={<HomePage />} />
+        <Route path="tragos-app/buscar-por-ingrediente" element={<BuscarPorIngrediente />} />
+        <Route path="tragos-app/buscar-tragos" element={<BuscarTragosPage />} />
+        <Route path="tragos-app/trago-detail/:id" element={<TragoDetail />} />
+        <Route path="*" element={<Navigate to="tragos-app" replace />} />
       </Routes>
     </BrowserRouter>
   );
