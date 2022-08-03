@@ -1,6 +1,6 @@
 {
-  "homepage": "https://BerLissarrague.github.io/TragosApp",
-  "name": "tragosapp",
+  "homepage": "https://BerLissarrague.github.io/tragos-app",
+  "name": "tragos-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
